@@ -8,11 +8,10 @@
 <body>
     <h1>Prueba con CKeditor</h1>
     <form>
-        <label for="titulo">Titulo</label>
-        <input type="text">
-        <br><br>
-        <label for="descripcion">Descripcion</label>
-        <textarea name="" id="descripcion" rows="4"></textarea>
+        {{ form.as_p }}
     </form>
+    {% load static %}
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 </body>
 </html>
